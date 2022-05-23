@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="js.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#">M.Said Eker</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="#">M.Said Eker</a><button data-bs-toggle="collapse"
+                class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
@@ -29,10 +32,17 @@
                 <div class="col">
                     <div class="carousel slide carousel-dark" data-bs-ride="carousel" id="carousel-1">
                         <div class="carousel-inner">
-                            <div class="carousel-item active" style="max-height: 256px;"><img class="w-100 d-block" src="assets/img/snugman.png" alt="Slide Image" style="max-height: 256px;"></div>
-                            <div class="carousel-item" style="max-height: 256px;"><img class="w-100 d-block" src="assets/img/2.jpg" alt="Slide Image" style="max-height: 256px;"></div>
+                            <div class="carousel-item active" style="max-height: 256px;"><img class="w-100 d-block"
+                                    src="assets/img/snugman.png" alt="Slide Image" style="max-height: 256px;"></div>
+                            <div class="carousel-item" style="max-height: 256px;"><img class="w-100 d-block"
+                                    src="assets/img/2.jpg" alt="Slide Image" style="max-height: 256px;"></div>
                         </div>
-                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <div><a class="carousel-control-prev" href="#carousel-1" role="button"
+                                data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span
+                                    class="visually-hidden">Previous</span></a><a class="carousel-control-next"
+                                href="#carousel-1" role="button" data-bs-slide="next"><span
+                                    class="carousel-control-next-icon"></span><span
+                                    class="visually-hidden">Next</span></a></div>
                         <ol class="carousel-indicators">
                             <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                             <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
@@ -60,61 +70,97 @@
         </div>
         <div class="container mt-5">
             <div class="row">
-                <div class="col">
-                    <h1 class="text-center">JS ile Saat</h1>
+                <div class="col-5">
+                    <h1 class="text-center">Addition</h1>
                     <div class="row">
-                        <div class="col">
-                            <div id="saatgorunum" class="saat"></div>
+                        <div id="card" class="col-12 offset-1">
+                            <label class="label">First Number</label>
+                            <input class="form-control" type="text" id="x" name="x">
+                            <label class="label">Second Number</label>
+                            <input class="form-control" type="text" id="y" name="y">
+                            <button type="button" id="btn" class="btn btn-danger" onclick="addition()"
+                                value="1">Calculate</button><br>
+                            <label id="frmlbl" class="label">Result: <b id="res"></b></label>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="text-center">JS ile Saat</h1>
+                <div class="col-5 offset-2">
+                    <h1 class="text-center">Subtraction</h1>
+                    <div class="row">
+                        <div id="card" class="col-12 offset-1">
+                            <label class="label">First Number</label>
+                            <input class="form-control" type="text" id="x1" name="x">
+                            <label class="label">Second Number</label>
+                            <input class="form-control" type="text" id="y1" name="y">
+                            <button type="button" id="btn" class="btn btn-danger" onclick="subtraction()"
+                                value="1">Calculate</button><br>
+                            <label id="frmlbl" class="label">Result: <b id="sub"></b></label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container mt-5">
             <div class="row">
-                <div class="col">
-                    <h1 class="text-center">JS ile Saat</h1>
+                <div class="col-5">
+                    <h1 class="text-center">Multiplication</h1>
                     <div class="row">
-                        <div class="col">
-                            <div id="saatgorunum-1" class="saat"></div>
+                        <div id="card" class="col-12 offset-1">
+                            <label class="label">First Number</label>
+                            <input class="form-control" type="text" id="x2" name="x">
+                            <label class="label">Second Number</label>
+                            <input class="form-control" type="text" id="y2" name="y">
+                            <button type="button" id="btn" class="btn btn-danger" onclick="Multiplication()"
+                                value="1">Calculate</button><br>
+                            <label id="frmlbl" class="label">Result: <b id="mul"></b></label>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="text-center">JS ile Saat</h1>
+                <div class="col-5 offset-2">
+                    <h1 class="text-center">Division</h1>
+                    <div class="row">
+                        <div id="card" class="col-12 offset-1">
+                            <label class="label">First Number</label>
+                            <input class="form-control" type="text" id="x3" name="x">
+                            <label class="label">Second Number</label>
+                            <input class="form-control" type="text" id="y3" name="y">
+                            <button type="button" id="btn" class="btn btn-danger" onclick="Division()"
+                                value="1">Calculate</button><br>
+                            <label id="frmlbl" class="label">Result: <b id="div"></b></label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container mt-5">
             <div class="row">
-                <div class="col">
-                    <h1 class="text-center">JS ile Saat</h1>
+                <div class="col-5">
+                    <h1 class="text-center">Modulus</h1>
                     <div class="row">
-                        <div class="col">
-                            <div id="saatgorunum-3" class="saat"></div>
+                        <div id="card" class="col-12 offset-1">
+                            <label class="label">First Number</label>
+                            <input class="form-control" type="text" id="x4" name="x">
+                            <label class="label">Second Number</label>
+                            <input class="form-control" type="text" id="y4" name="y">
+                            <button type="button" id="btn" class="btn btn-danger" onclick="Modulus()"
+                                value="1">Calculate</button><br>
+                            <label id="frmlbl" class="label">Result: <b id="mod"></b></label>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="text-center">JS ile Saat</h1>
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-center">JS ile Saat</h1>
+                <div class="col-5 offset-2">
+                    <h1 class="text-center">Word Combining</h1>
                     <div class="row">
-                        <div class="col">
-                            <div id="saatgorunum-2" class="saat"></div>
+                        <div id="card" class="col-12 offset-1">
+                            <label class="label">First Word</label>
+                            <input class="form-control" type="text" id="x5" name="x">
+                            <label class="label">Second Word</label>
+                            <input class="form-control" type="text" id="y5" name="y">
+                            <button type="button" id="btn" class="btn btn-danger" onclick="Combining()"
+                                value="1">Calculate</button><br>
+                            <label id="frmlbl" class="label">Result: <b id="com"></b></label>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="text-center">JS ile Saat</h1>
                 </div>
             </div>
         </div>
